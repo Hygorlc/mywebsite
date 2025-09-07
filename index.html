@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="frontend/css/products.css">
 <style>
 body {font-family: "Times New Roman", Georgia, Serif;}
 h1, h2, h3, h4, h5, h6 {
@@ -38,6 +39,14 @@ h1, h2, h3, h4, h5, h6 {
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:1100px">
+
+  <!-- Product Search -->
+  <div class="w3-container w3-padding-64" id="products">
+    <h1>Products</h1>
+    <input id="search-input" class="w3-input w3-border" type="text" placeholder="Search products">
+    <div id="search-results" class="w3-margin-top"></div>
+    <ul id="product-list" class="w3-ul w3-margin-top"></ul>
+  </div>
 
   <!-- About Section -->
   <div class="w3-row w3-padding-64" id="about">
@@ -103,10 +112,24 @@ h1, h2, h3, h4, h5, h6 {
 <!-- End page content -->
 </div>
 
+<!-- Side product panel -->
+<aside id="product-panel" class="w3-sidebar w3-bar-block w3-card w3-animate-right">
+  <span class="w3-bar-item w3-button w3-large w3-right" id="panel-close">&times;</span>
+  <div class="w3-container">
+    <img id="panel-image" style="width:100%" alt="Product image">
+    <p><input id="panel-name" class="w3-input w3-margin-top" placeholder="Name"></p>
+    <p><textarea id="panel-description" class="w3-input w3-margin-top" placeholder="Description"></textarea></p>
+    <p><input id="panel-price" type="number" step="0.01" class="w3-input w3-margin-top" placeholder="Price"></p>
+    <p><input type="file" id="panel-photo" class="w3-input w3-margin-top"></p>
+    <button id="panel-save" class="w3-button w3-green w3-margin-top">Save</button>
+  </div>
+</aside>
+
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-32">
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 
+<script src="frontend/js/products.js"></script>
 </body>
 </html>
